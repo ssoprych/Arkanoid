@@ -23,6 +23,7 @@ public class Brick : MonoBehaviour
             _ballhits++;
             if (_ballhits == _hitsToKill)
             {
+                Arkanoid.score += _points;
                 Destroy(gameObject);
             }
             if (spriteRenderer)
