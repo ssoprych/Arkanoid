@@ -10,6 +10,7 @@ public class BallMovement : MonoBehaviour
     void Start()
     {
         _ball.velocity = Vector2.down * _speed;
+        FindObjectOfType<GameManager>().BallCount++;
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -23,7 +24,14 @@ public class BallMovement : MonoBehaviour
             _ball.velocity = dir * _speed;
         }
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Floor"))
+        {
+            FindObjectOfType<GameManager>().BallCount--;
+            Destroy(gameObject);
+        }
+    }
     float hitFactor(Vector2 ballPos, Vector2 paddlePos, float paddleWidth)
     {
         return (ballPos.x - paddlePos.x) / paddleWidth;

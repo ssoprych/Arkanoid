@@ -32,7 +32,7 @@ public class PowerUp : MonoBehaviour
         if (collision.gameObject.name == "SizeUp(Clone)")
         {
             //increase paddle size 
-            IncreasePaddleSize();
+            StartCoroutine(SizeUp());
             //destroy power up object 
             Destroy(collision.gameObject);
             //play sound
@@ -53,5 +53,11 @@ public class PowerUp : MonoBehaviour
             Destroy(collision.gameObject);
             //play sound
         }
+    }
+    private IEnumerator SizeUp()
+    {
+        IncreasePaddleSize();
+        yield return new WaitForSeconds(5);
+        DecreasePaddleSize();
     }
 }

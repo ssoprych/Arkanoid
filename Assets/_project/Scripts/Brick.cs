@@ -8,7 +8,7 @@ public class Brick : MonoBehaviour
     private int _ballhits;
     public int _hitsToKill;
     public int _points;
-    private static int i;
+    private int i;
     public SpriteRenderer spriteRenderer;
     [SerializeField] public Sprite[] _bricks;
     private void Start()
@@ -26,11 +26,15 @@ public class Brick : MonoBehaviour
                 Arkanoid.score += _points;
                 Destroy(gameObject);
             }
-            if (spriteRenderer)
+            else if (spriteRenderer)
             {
                 i++;
-                spriteRenderer.sprite = _bricks[i];
+                if (i <= _bricks.Length)
+                {
+                    spriteRenderer.sprite = _bricks[i];
+                }
             }
+            
             if (PowerUp)
             {
                 Instantiate(PowerUp, transform.position, transform.rotation);

@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf815031368e3c498ee13ca098793a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerUp: {fileID: 0}
+  PowerUp: {fileID: 4588603174890925491, guid: ae5cc2f644c58ec4b89901101e91024b, type: 3}
   _hitsToKill: 1
   _points: 50
   spriteRenderer: {fileID: 0}
