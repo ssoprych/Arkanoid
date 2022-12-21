@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public Transform BallSpawn;
     private bool _DidplayerLoseHeart;
     public GameObject WinScreen;
+    public GameObject PauseMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            PauseMenu.SetActive(true);
             Time.timeScale = 0;
         }
 
@@ -47,6 +49,5 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             WinScreen.SetActive(true);
         }
-        print(BrickCount);
     }
 }

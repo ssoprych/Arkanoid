@@ -7,6 +7,8 @@ TagManager:
   - Ball
   - Paddle
   - Floor
+  - Brick
+  - WinScreen
   layers:
   - Default
   - TransparentFX
