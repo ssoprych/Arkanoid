@@ -6,14 +6,17 @@ public class GameManager : MonoBehaviour
 {
     public int BallCount;
     public int Health = 3;
+    public int BrickCount;
     public GameObject Ball;
     public Transform BallSpawn;
     private bool _DidplayerLoseHeart;
+    public GameObject WinScreen;
 
     // Start is called before the first frame update
     void Start()
     {
         
+        BrickCount = 0;
     }
 
     // Update is called once per frame
@@ -38,5 +41,12 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 0;
         }
+
+        if (GameObject.FindGameObjectsWithTag("Brick").Length == 0)
+        {
+            Time.timeScale = 0;
+            WinScreen.SetActive(true);
+        }
+        print(BrickCount);
     }
 }

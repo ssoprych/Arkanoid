@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4887674544239255060}
   m_Layer: 0
   m_Name: Purple_brick
-  m_TagString: Untagged
+  m_TagString: Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
