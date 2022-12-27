@@ -6,18 +6,17 @@ public class GameManager : MonoBehaviour
 {
     public int BallCount;
     public int Health = 3;
-    public int BrickCount;
     public GameObject Ball;
     public Transform BallSpawn;
     private bool _DidplayerLoseHeart;
     public GameObject WinScreen;
     public GameObject PauseMenu;
+    public GameObject DeathScreen;
 
     // Start is called before the first frame update
     void Start()
     {
         
-        BrickCount = 0;
     }
 
     // Update is called once per frame
@@ -29,8 +28,8 @@ public class GameManager : MonoBehaviour
             Health--;
             if (Health <= 0)
             {
-                // Death screen
-                print("You lose");
+                Time.timeScale = 0;
+                DeathScreen.SetActive(true);
             }
             else
             {

@@ -24,7 +24,6 @@ public class Brick : MonoBehaviour
             if (_ballhits == _hitsToKill)
             {
                 Arkanoid.score += _points;
-                FindObjectOfType<GameManager>().BrickCount++;
                 Destroy(gameObject);
             }
             else if (spriteRenderer)

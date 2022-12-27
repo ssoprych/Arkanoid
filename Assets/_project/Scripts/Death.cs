@@ -3,13 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Pause : MonoBehaviour
+public class Death : MonoBehaviour
 {
-    public void Continue()
-    {
-        this.gameObject.SetActive(false);
-        Time.timeScale = 1;
-    }
+
     public void Quit()
     {
         Application.Quit();

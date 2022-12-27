@@ -11,4 +11,9 @@ public class WinScript : MonoBehaviour
     {
         _endingScoreText.text = "Your score was: " + Arkanoid.score;
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
