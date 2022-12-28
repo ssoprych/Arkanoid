@@ -6,14 +6,16 @@ using UnityEngine.SceneManagement;
 public class Death : MonoBehaviour
 {
 
-    public void Quit()
+    public void MainMenuiguess()
     {
-        Application.Quit();
+        SceneManager.LoadScene(0);
     }
 
-    public void Retry()
+    public void RetryAndRestartLol()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Arkanoid.score = 0;
+        Time.timeScale = 1;
     }
+
 }
