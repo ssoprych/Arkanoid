@@ -13,6 +13,10 @@ public class WinScript : MonoBehaviour
         _endingScoreText.text = "Your score was: " + Arkanoid.score;
     }
 
+    private void Start()
+    {
+        FindObjectOfType<AudioManager>().Win.Play();
+    }
     public void NextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

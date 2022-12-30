@@ -29,6 +29,7 @@ public class PowerUp : MonoBehaviour
     //spawn ball from paddle
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        FindObjectOfType<AudioManager>().PowerUp.Play();
         if (collision.gameObject.name == "SizeUp(Clone)")
         {
             //increase paddle size 

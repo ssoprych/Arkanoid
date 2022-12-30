@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Death : MonoBehaviour
 {
-
+    private void Start()
+    {
+        FindObjectOfType<AudioManager>().Lose.Play();
+    }
     public void MainMenuiguess()
     {
         SceneManager.LoadScene(0);

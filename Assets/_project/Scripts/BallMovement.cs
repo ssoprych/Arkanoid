@@ -15,6 +15,7 @@ public class BallMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
+        FindObjectOfType<AudioManager>().BallHit.Play();
         if (col.gameObject.name == "Paddle")
         {
             float x = hitFactor(transform.position, col.transform.position, col.collider.bounds.size.x);
@@ -28,6 +29,7 @@ public class BallMovement : MonoBehaviour
     {
         if (collision.CompareTag("Floor"))
         {
+            FindObjectOfType<AudioManager>().LoseHeart.Play();
             FindObjectOfType<GameManager>().BallCount--;
             Destroy(gameObject);
         }

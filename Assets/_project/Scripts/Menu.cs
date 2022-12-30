@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    public AudioSource Theme;
     private void Start()
     {
+        Theme.Play();
         Time.timeScale = 1;
         Arkanoid.score = 0;
     }
