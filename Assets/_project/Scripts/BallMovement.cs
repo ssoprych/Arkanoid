@@ -29,7 +29,10 @@ public class BallMovement : MonoBehaviour
     {
         if (collision.CompareTag("Floor"))
         {
-            FindObjectOfType<AudioManager>().LoseHeart.Play();
+            if (this.gameObject.name == "Ball")
+            {
+                FindObjectOfType<AudioManager>().LoseHeart.Play();
+            }
             FindObjectOfType<GameManager>().BallCount--;
             Destroy(gameObject);
         }
