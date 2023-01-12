@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-    public AudioSource Theme;
     private void Start()
     {
-        Theme.Play();
         Time.timeScale = 1;
         Arkanoid.score = 0;
     }
